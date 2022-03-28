@@ -1,35 +1,6 @@
-// const path = require('path');
-// module.exports = {
-//   mode: 'development',
-//   entry: './src/index.js',
-//   output: {
-//     path: path.resolve('dist'),
-//     filename: 'bundle.js',
-//   },
-//   module: {
-//     rules: [
-//       {
-//         test: /\.js$/,
-//         use: {
-//           loader: 'babel-loader',
-//         },
-//         exclude: /node_modules/,
-//       },
-//     ],
-//   },
-//   devServer: {
-//     port: 3000,
-//     hot: true,
-//     static: {
-//       directory: path.resolve('dist'),
-//     },
-//   },
-// };
-
-
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
 module.exports = {
   entry: "./src/index.tsx",
   target: "web",
@@ -56,21 +27,27 @@ module.exports = {
         test: /\.css$/,
         loader: "css-loader",
       },
+      {
+        test: /\.s[ac]ss$/,
+        use: [
+          "style-loader",
+          "css-loader",
+          "sass-loader",
+          { loader: "sass-loader" },
+        ],
+      },
     ],
   },
-    devServer: {
+  devServer: {
     port: 8080,
     hot: true,
     static: {
-      directory: path.resolve('dist'),
+      directory: path.resolve("dist"),
     },
   },
   plugins: [
     new HtmlWebpackPlugin({
       template: path.resolve(__dirname, "src", "index.html"),
-    }),
-    new MiniCssExtractPlugin({
-      filename: "./src/yourfile.css",
     }),
   ],
 };
