@@ -1,0 +1,35 @@
+body {
+  font-family: "Segoe UI";
+  background-color: whitesmoke;
+  margin: 0;
+}
+
+.sidebar {
+  position: absolute;
+  margin: 0;
+  height: 100%;
+  width: 15%;
+  color: white;
+  background-color: darkslateblue;
+  .link {
+    color: white;
+    display: flex;
+    text-decoration: none;
+    position: relative;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0.5rem;
+    img {
+      background-image: "../assets/images/LogoUT.png";
+    }
+    h3 {
+      margin-left: 1rem;
+    }
+  }
+  li {
+    margin: 1rem;
+    text-decoration: none;
+    list-style: none;
+    color: white;
+  }
+}
