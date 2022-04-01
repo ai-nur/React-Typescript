@@ -1,35 +1,128 @@
+$primaryColor: rgb(245, 180, 16);
+$secondaryColor: rgb(214, 158, 15);
+
+
 body {
   font-family: "Segoe UI";
   background-color: whitesmoke;
+  display: flex;
   margin: 0;
 }
 
-.sidebar {
-  position: absolute;
-  margin: 0;
+.wrapper {
   height: 100%;
-  width: 15%;
-  color: white;
-  background-color: darkslateblue;
-  .link {
-    color: white;
-    display: flex;
-    text-decoration: none;
-    position: relative;
-    justify-content: flex-start;
-    align-items: center;
-    margin: 0.5rem;
-    img {
-      background-image: "../assets/images/LogoUT.png";
+  width: 100%;
+  .sidebar {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    color: black;
+    background-color: $primaryColor;
+    .link {
+      color: black;
+      display: flex;
+      text-decoration: none;
+      justify-content: flex-start;
+      align-items: center;
+      margin: 10px;
+      // border: 1px solid black;
+      padding: 10px 40px 10px 15px;
+      img {
+        height: 70px;
+        width: 70px;
+      }
+      h3 {
+        margin-left: 1rem;
+      }
     }
-    h3 {
-      margin-left: 1rem;
+    li {
+      margin: 1rem;
+      text-decoration: none;
+      list-style: none;
+      color: black;
+      &:hover {
+        background-color: $secondaryColor;
+      }
     }
   }
-  li {
-    margin: 1rem;
-    text-decoration: none;
-    list-style: none;
-    color: white;
+
+  .main-content {
+    position: relative;
+    display: block;
+    justify-content: center;
+    margin: 0 0 0 250px;
+    height: 100%;
+    width: 100%;
+    h2 {
+      text-align: center;
+      margin: 0;
+      padding: 10px 0 0 0;
+    }
+    table {
+      display: table;
+      border-radius: 10px;
+      button {
+        border: none;
+        border-radius: 6px;
+        padding: 10px;
+        margin: 0 10px 0 0;
+        color: white;
+        background-color: black;
+        font-weight: bold;
+        font-size: 11px;
+        cursor: pointer;
+        &:hover {
+          background-color: $secondaryColor;
+          color: black;
+        }
+      }
+  
+    }
+    button {
+      border: none;
+      border-radius: 10px;
+      padding: 10px;
+      margin: 0.5rem 0 0.5rem 0;
+      color: black;
+      background-color: $primaryColor;
+      font-weight: bold;
+      cursor: pointer;
+      &:hover {
+        background-color: $secondaryColor;
+      }
+    }
+    .box {
+      margin: 0 50px 20px 50px;
+      .table-latitude {
+        background-color: $primaryColor;
+        // margin: 20px 50px 20px 50px;
+        padding: 20px;
+        width: 100%;
+        thead {
+          border-top: 2px solid black;
+          border-bottom: 2px solid black;
+          th {
+            text-transform: uppercase;
+            text-align: center;
+            padding: 10px;
+            color: black;
+            border: 1px solid white;
+          }
+        }
+        tbody {
+          tr {
+            border-bottom: 1px solid white;
+            color: black;
+            td {
+              padding: 10px;
+              border: 1px solid white;
+              text-align: center;
+            }
+          }
+        }
+      }
+    }
+    
   }
 }
