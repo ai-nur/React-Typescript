@@ -1,7 +1,6 @@
 $primaryColor: rgb(245, 180, 16);
 $secondaryColor: rgb(214, 158, 15);
 
-
 body {
   font-family: "Segoe UI";
   background-color: whitesmoke;
@@ -37,7 +36,6 @@ body {
       }
     }
     li {
-      margin: 1rem;
       text-decoration: none;
       list-style: none;
       color: black;
@@ -53,33 +51,14 @@ body {
     justify-content: center;
     margin: 0 0 0 250px;
     height: 100%;
-    width: 100%;
+    // width: 100%;
     h2 {
-      text-align: center;
+      text-align: left;
       margin: 0;
-      padding: 10px 0 0 0;
+      // margin-top: 100px;
+      padding: 25px 0 20px 0;
     }
-    table {
-      display: table;
-      border-radius: 10px;
-      button {
-        border: none;
-        border-radius: 6px;
-        padding: 10px;
-        margin: 0 10px 0 0;
-        color: white;
-        background-color: black;
-        font-weight: bold;
-        font-size: 11px;
-        cursor: pointer;
-        &:hover {
-          background-color: $secondaryColor;
-          color: black;
-        }
-      }
-  
-    }
-    button {
+    .button {
       border: none;
       border-radius: 10px;
       padding: 10px;
@@ -95,34 +74,152 @@ body {
     .box {
       margin: 0 50px 20px 50px;
       .table-latitude {
+        display: table;
         background-color: $primaryColor;
-        // margin: 20px 50px 20px 50px;
-        padding: 20px;
-        width: 100%;
+        padding: 10px;
+        border-radius: 10px;
+        border-width: 0;
+
+        button {
+          border: none;
+          border-radius: 6px;
+          padding: 10px;
+          margin: 0 10px 0 0;
+          color: white;
+          background-color: black;
+          font-weight: bold;
+          font-size: 11px;
+          cursor: pointer;
+          &:hover {
+            background-color: $secondaryColor;
+            color: black;
+          }
+        }
         thead {
-          border-top: 2px solid black;
-          border-bottom: 2px solid black;
           th {
             text-transform: uppercase;
             text-align: center;
-            padding: 10px;
+            padding: 0;
             color: black;
-            border: 1px solid white;
+            // border: 2px solid $secondaryColor;
+            border-radius: 4px;
           }
         }
         tbody {
-          tr {
-            border-bottom: 1px solid white;
+          td {
             color: black;
-            td {
-              padding: 10px;
-              border: 1px solid white;
-              text-align: center;
-            }
+            // border: 2px solid $secondaryColor;
+            text-align: center;
+            border-radius: 4px;
           }
         }
       }
     }
-    
+  }
+}
+
+.modal-wrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  .modal-content {
+    background-color: whitesmoke;
+    margin: 0;
+    padding: 0;
+    width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    animation-name: animate;
+    animation-duration: 0.8s;
+    .modal-header {
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+      padding: 2px 16px;
+      background-color: $primaryColor;
+      color: black;
+      flex-direction: row;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      h3 {
+        // padding: 10px 0px;
+        margin-left: 160px;
+      }
+      .close {
+        cursor: pointer;
+        font-size: x-large;
+        border-radius: 6px;
+      }
+    }
+    .modal-body {
+      // display: flex;
+      padding: 2px 16px;
+      .form {
+        justify-content: space-between;
+        .input {
+          margin: 6px 0;
+          padding: 0 6px;
+          width: 97%;
+          height: 35px;
+          border-radius: 6px;
+          border: none;
+        }
+        .check {
+          @extend .input;
+          height: 20px!important;
+        }
+        .roww {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          .columns {
+            width: 48%;
+          }
+        }
+      }
+    }
+    .modal-footer {
+      display: flex;
+      justify-content: center !important;
+      border-bottom-left-radius: 10px;
+      border-bottom-right-radius: 10px;
+      background-color: $primaryColor;
+      .button-save {
+        cursor: pointer;
+        color: black;
+        background-color: $primaryColor;
+        width: 100%;
+        margin: 0 !important;
+        padding: 10px !important;
+        border: none;
+        border-bottom-left-radius: 10px !important;
+        border-bottom-right-radius: 10px !important;
+        font-size: large !important;
+        font-weight: 500 !important;
+        &:hover {
+          background-color: $secondaryColor;
+        }
+      }
+    }
+  }
+}
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes animatetop {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }
