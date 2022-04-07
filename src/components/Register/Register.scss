@@ -1,0 +1,88 @@
+$primaryColor: rgb(245, 180, 16);
+$secondaryColor: rgb(214, 158, 15);
+
+.center-item {
+  display: flex;
+  background-color: $primaryColor;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  form {
+    width: 40%;
+    box-shadow: 0 0 10px 15px rgba(0, 0, 0, 0.3);
+    padding: 40px;
+    border-radius: 20px;
+    background-color: white;
+    .header {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      h1 {
+        text-align: center;
+        margin: 0 210px 0 170px;
+      }
+      .pp {
+        text-align: center;
+        align-items: center;
+        margin: 0;
+        padding: 5px;
+        border-radius: 10px;
+        background-color: $secondaryColor;
+        &:hover {
+            background-color: $primaryColor;
+          }
+          .p-link {
+            color: white;
+            align-self: center;
+            text-decoration: none;
+          }
+        }
+    }
+    input {
+      width: 100%;
+      box-sizing: border-box;
+      margin-top: 20px;
+      outline: none;
+      border: none;
+      border-radius: 10px;
+      background-color: whitesmoke;
+      padding: 10px;
+      line-height: 2;
+      font-size: 16px;
+      &:hover {
+        background-color: rgb(235, 235, 235);
+      }
+    }
+    button {
+      background-color: $secondaryColor;
+      color: white;
+      font-size: 18px;
+      width: 100%;
+      outline: none;
+      border: none;
+      border-radius: 10px;
+      padding: 15px;
+      margin-top: 20px;
+      cursor: pointer;
+      &:hover {
+        background-color: $primaryColor;
+      }
+    }
+    p {
+      text-align: center;
+      margin-bottom: 0px;
+      a {
+        text-align: center;
+        text-decoration: none;
+        color: $secondaryColor;
+        padding-left: 3px;
+        &:hover {
+          text-decoration: none;
+          color: $primaryColor;
+        }
+      }
+    }
+  }
+}

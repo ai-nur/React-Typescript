@@ -1,14 +1,17 @@
 import React from "react";
-import Login from "./components/Login";
-import DashboardComponent from "./components/DashboardComponent";
-import Test from "./components/Test";
+import { Login, Register, DashboardComponent, StockComponent } from "./components";
+import { Route, Routes } from "react-router-dom";
 
 export const App = () => {
   return (
     <div>
-      {/* <Login /> */}
-      <DashboardComponent />
-      {/* <Test /> */}
+      <Routes >
+        <Route path="/login" element={<Login />} />
+        <Route path="/register" element={<Register />} />
+        <Route path="/stock" element={<StockComponent />} />
+        <Route path="/" element={<DashboardComponent />} />
+
+      </Routes>
     </div>
   );
 };

@@ -1,17 +1,23 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./Login.scss";
 
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleClick = (e: any) => {
+  const handleSubmit = (e: any) => {
     e.preventDefault
   }
   return (
     <div className="center-item">
       <form>
-        <h1>Please Login !</h1>
+      <div className="header">
+          <p className="pp">
+            <Link className="p-link" to="/">Back</Link>
+          </p>
+          <h1 className="h1" >Login</h1>
+        </div>
         <input
           type="text"
           placeholder="Enter Username"
@@ -22,10 +28,10 @@ const Login = () => {
           placeholder="Enter Password"
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button type="submit" onClick={handleClick}>Login</button>
+        <button type="submit" onClick={handleSubmit}>Login</button>
 
         <p>
-          Not Registered ?<a href="#">Create Account Now!</a>
+          Not Registered ?<Link to="/register" >Create Account Now!</Link>
         </p>
       </form>
     </div>

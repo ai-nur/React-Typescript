@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import "./DashboardStyle.scss";
-import LogoUT from "../assets/images/LogoUT.png";
+import {Logo} from "../../assets";
 import Modal from "react-modal";
+import { Link } from "react-router-dom";
 
 const DashboardComponent = () => {
   const [modalShown, setModalShown] = useState(false);
@@ -19,7 +20,7 @@ const DashboardComponent = () => {
       name: "Sunsilk",
       stock: "999",
       imageURL:
-        "https://www.lifebuoy.co.id/content/dam/brands/lifebuoy/id_id/products/1000001.png",
+        "https://image.femaledaily.com/dyn/500/images/prod-pics/product_1615542034_Hair_Fall__800x800.jpg",
       price: "10.000",
       category: "Shampoo",
       actived: false,
@@ -203,41 +204,44 @@ const DashboardComponent = () => {
 
       {/* sidebar */}
       <ul className="sidebar">
-        <a className="link" href="#">
-          <img src={LogoUT} className="img"></img>
+        <Link className="link" to="/login">
+          <img src={Logo} className="img"></img>
           <h3>UT Admin</h3>
-        </a>
+        </Link>
         <li>
-          <a className="link" href="#">
+          <Link className="link" to="/stock">
             Stock
-          </a>
+          </Link>
         </li>
         <li>
-          <a className="link" href="#">
+          <Link className="link" to="/stock">
             Image
-          </a>
+          </Link>
         </li>
         <li>
-          <a className="link" href="#">
+          <Link className="link" to="/stock">
             Pricing
-          </a>
+          </Link>
         </li>
         <li>
-          <a className="link" href="#">
+          <Link className="link" to="/stock">
             Category
-          </a>
+          </Link>
         </li>
         <li>
-          <a className="link" href="#">
+          <Link className="link" to="/stock">
             Actived
-          </a>
+          </Link>
         </li>
       </ul>
 
       {/* Main Content */}
       <div className="main-content">
         {/* Header */}
-        <div></div>
+        <div className="header">
+          <img className="img-profil" src={Logo} />
+          <Link className="link-profil" to="/login" >Login</Link>
+        </div>
         {/* Table */}
         <div className="box">
           <h2>Product Information</h2>
