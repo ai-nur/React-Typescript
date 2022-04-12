@@ -1,0 +1,18 @@
+.Container-product {
+  margin: 75px 0 0 239px;
+  padding: 40px;
+  .Header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 20px;
+  }
+  .Main-Input {
+    margin: 20px 40px;
+    .MuiButton-root {
+      width: 100%;
+      border-radius: 8px;
+    }
+  }
+}

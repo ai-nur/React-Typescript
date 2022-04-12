@@ -1,0 +1,42 @@
+.MuiButton-root {
+    text-transform: none!important ;
+}
+.link-btn {
+    text-decoration: none;
+}
+
+.Container-Users {
+  margin: 75px 0 0 239px;
+  padding: 40px;
+  .Header {
+    display: flex;
+    padding: 0 20px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .MuiTableContainer-root {
+    background-color: whitesmoke;
+    padding: 20px;
+    width: auto !important;
+    .MuiTable-root {
+      border: 2px !important;
+      border-spacing: 2px !important;
+      border-color: black;
+      .MuiTableBody-root {
+        .MuiTableRow-root {
+          .MuiTableCell-root {
+            justify-content: space-between;
+            .link-btn {
+                margin : 0 10px;
+                align-items: center;
+                .MuiButton-root {
+                    font-size: small;
+                }
+            }
+          }
+        }
+      }
+    }
+  }
+}

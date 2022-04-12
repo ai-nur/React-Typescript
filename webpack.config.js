@@ -17,19 +17,23 @@ module.exports = {
       {
         test: /\.(ts|tsx)$/,
         loader: "ts-loader",
-        exclude: path.resolve(__dirname, "node_modules")
+        exclude: /node_modules/,
+        // exclude: path.resolve(__dirname, "node_modules")
       },
       {
         enforce: "pre",
         test: /\.js$/,
+        exclude: /node_modules/,
         loader: "source-map-loader",
       },
       {
         test: /\.css$/,
+        exclude: /node_modules/,
         loader: "css-loader",
       },
       {
         test: /\.s[ac]ss$/,
+        exclude: /node_modules/,
         use: [
           "style-loader",
           "css-loader",
